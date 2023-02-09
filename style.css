@@ -1,0 +1,33 @@
+label {
+    color: white;
+    font-family: "SF Pro Display", serif;
+}
+
+#current-window {
+    font-weight: 600;
+}
+
+button {
+    font-weight: normal;
+    background: none;
+    box-shadow: none;
+    padding-top: 4px;
+    margin-bottom: -8px;
+    margin-top: -8px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#tray {
+   background: none;
+}
+
+#search {
+    font-size: 18px;
+    padding-bottom: 2px; /* Fix for a slight offset */
+}
+
+/* This is just to make the bar extend down further */
+#extend {
+    padding-bottom: 21px;
+}
