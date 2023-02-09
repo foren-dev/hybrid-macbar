@@ -1,0 +1,64 @@
+{
+  "hybrid": {
+    "cava_sed": "s/;//g;s/0/▁ /g;s/1/▂ /g;s/2/▃ /g;s/3/▄ /g;s/4/▅ /g;s/5/▆ /g;s/6/▇ /g;s/7/█/g;",
+    "stylesheet": "style.css",
+    "cava_update_rate": 5,
+    "cava_framerate": 360,
+    "expand_right": true,
+    "experimental": true,
+    "expand_left": true,
+    "cava_bars": 7,
+    "r": 10,
+    "g": 10,
+    "b": 10,
+    "a": 0.5
+  },
+  "variables": {
+    "@volume": "echo $(pactl get-sink-volume @DEFAULT_SINK@ | rg -o '[0-9]{1,3}%' | head -n 1 | cut -d '%' -f 1)%",
+    "@get": "jq -r",
+    "$+s": "<small>",
+    "$-s": "</small>"
+  },
+  "left-spacing_start_gap": {
+    "spacing_start": 2
+  },
+  "left-button_logo": {
+    "text": "\uF179",
+    "command": "~/gits/about-this-linux/about-this-linux-v2"
+  },
+  "left-spacing_start_gap_2": {
+    "spacing_start": 2
+  },
+  "left-label_current-window": {
+    "command": "hyprctl activewindow -j | @get '.title'",
+    "tooltip": "Currently focused on ",
+    "tooltip_command": "hyprctl activewindow -j | @get '.title'"
+  },
+  "right-tray_tray": {},
+  "right-spacing_tr": {
+    "spacing_start": 8
+  },
+  "right-label_vol": {
+    "text": "\uf028"
+  },
+  "right-spacing_vol": {
+    "spacing_start": 10
+  },
+  "right-label_time": {
+    "command": "date '+%a %d %b  %H:%M'",
+    "tooltip": "$+sCurrent hour:minute$-s",
+    "update_rate": 5000
+  },
+  "right-button_search": {
+    "text": "\uDB80\uDF49",
+    "command": "wofi --show drun",
+    "tooltip": "Search"
+  },
+  "right-label_menu": {
+    "text": "\ueb94"
+  },
+  "right-spacing_menu": {
+    "spacing_start": 10
+  },
+  "right-spacing_extend": {}
+}
